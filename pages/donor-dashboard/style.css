@@ -1,0 +1,265 @@
+.hero {
+  background: url("../../assets/20160411-15_HON_HP1294.png") center center
+    no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+
+.dashboard-main {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.register {
+  gap: 10px;
+  flex-direction: row;
+}
+
+.register img {
+  width: 25px;
+}
+
+.register .become-partner {
+  padding: 0;
+  display: block;
+}
+
+.become-partner {
+  position: relative;
+}
+.register .become-partner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-radius: 5px;
+  background-color: var(--primary-clr);
+  transition: transform 250ms ease-in-out;
+}
+
+.register .become-partner:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.main-nav {
+  background-color: var(--primary-clr);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.24);
+}
+
+.main-nav > ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav li a {
+  padding: 0;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.main-nav li {
+  position: relative;
+  padding: 1.2rem 1.5rem;
+}
+
+.main-nav li.active {
+  background-color: var(--secondary-clr);
+}
+
+.main-nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 1.1rem;
+  left: 1.25rem;
+  width: calc(100% - 2.5rem);
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transition: transform 250ms ease-in-out;
+}
+
+.main-nav li:hover::after,
+.main-nav .active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.donor-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.donor-flex span {
+  color: var(--primary-clr);
+}
+
+.donor-content {
+  flex-basis: 70%;
+}
+
+.donor-content > h3 {
+  margin-top: 4rem;
+  font-size: 25px;
+}
+
+.donor-flex p {
+  margin: 1rem auto;
+}
+
+.dashboard-news {
+  max-width: 1000px;
+  padding: 1rem 3rem 6rem;
+  border: 4px solid var(--primary-clr);
+  border-radius: 10px;
+  position: relative;
+  background-color: #ffffff;
+  text-align: justify;
+}
+
+.dashboard-news::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: -1rem;
+  right: -1rem;
+  width: 50%;
+  height: 70%;
+  background-color: var(--primary-clr);
+  z-index: -1;
+}
+
+.dashboard-news::after {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  bottom: -1rem;
+  left: -1rem;
+  width: 15%;
+  height: 40%;
+  background-color: var(--secondary-clr);
+  z-index: -1;
+}
+
+.dashboard-news h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.dashboard-news p span {
+  font-weight: bold;
+  display: block;
+  margin-top: 1rem;
+  color: var(--accent-clr);
+}
+
+.donor-card {
+  border: 4px solid var(--primary-clr);
+  border-radius: 10px;
+  padding: 0;
+  align-self: flex-start;
+}
+
+.donor-card h5 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.donor-card span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+}
+
+.donor-card span span {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.donor-card .donation-btn {
+  display: block;
+  color: #ffff;
+  background-color: var(--secondary-clr);
+  border-radius: 30px;
+  padding: 0.8rem 1rem;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.donor-card-head {
+  background-color: var(--primary-clr);
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  margin: -0.08rem;
+}
+
+.donor-card-head a {
+  text-decoration: underline;
+  color: #ffff;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .register img {
+    width: 20px;
+  }
+
+  .register .become-partner {
+    font-size: 0.8rem;
+    margin-right: 4rem;
+  }
+
+  .main-nav li a {
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+  .main-nav > ul {
+    gap: 0;
+  }
+
+  .main-nav li {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .main-nav li.active {
+    background-color: var(--secondary-clr);
+  }
+
+  .main-nav li::after {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    width: calc(100% - 0.9rem);
+  }
+
+  .donor-flex {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .dashboard-news {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .donor-card {
+    align-self: center;
+  }
+}
